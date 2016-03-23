@@ -8019,13 +8019,13 @@ SMD type&lt;br&gt;</description>
 <part name="PAD31" library="zerofat" deviceset="SMD2" device="" value="A14"/>
 <part name="PAD33" library="zerofat" deviceset="SMD2" device="" value="B5"/>
 <part name="PAD34" library="zerofat" deviceset="SMD2" device="" value="B7"/>
-<part name="PAD35" library="zerofat" deviceset="SMD2" device="" value="B0"/>
+<part name="PAD35" library="zerofat" deviceset="SMD2" device="" value="BL"/>
 <part name="PAD36" library="zerofat" deviceset="SMD2" device="" value="B6"/>
 <part name="PAD37" library="zerofat" deviceset="SMD2" device="" value="B4"/>
 <part name="PAD39" library="zerofat" deviceset="SMD2" device="" value="GND"/>
-<part name="PAD43" library="zerofat" deviceset="SMD2" device="" value="3V3"/>
+<part name="PAD43" library="zerofat" deviceset="SMD2" device="" value="GND"/>
 <part name="PAD45" library="zerofat" deviceset="SMD2" device="" value="5V"/>
-<part name="PAD48" library="zerofat" deviceset="SMD2" device="" value="3V3"/>
+<part name="PAD48" library="zerofat" deviceset="SMD2" device="" value="GND"/>
 <part name="PAD49" library="zerofat" deviceset="SMD2" device="" value="GND"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
@@ -8051,6 +8051,13 @@ SMD type&lt;br&gt;</description>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0603" value="1uF"/>
 <part name="PAD1" library="zerofat" deviceset="SMD2" device="" value="SCL"/>
 <part name="PAD2" library="zerofat" deviceset="SMD2" device="" value="SDA"/>
+<part name="PAD5" library="zerofat" deviceset="SMD2" device="" value="GND"/>
+<part name="PAD7" library="zerofat" deviceset="SMD2" device="" value="3V3"/>
+<part name="PAD15" library="zerofat" deviceset="SMD2" device="" value="3V3"/>
+<part name="PAD19" library="zerofat" deviceset="SMD2" device="" value="SDA"/>
+<part name="PAD20" library="zerofat" deviceset="SMD2" device="" value="SCL"/>
+<part name="PAD21" library="zerofat" deviceset="SMD2" device="" value="3V3"/>
+<part name="PAD22" library="zerofat" deviceset="SMD2" device="" value="GND"/>
 </parts>
 <sheets>
 <sheet>
@@ -8104,9 +8111,9 @@ SMD type&lt;br&gt;</description>
 <instance part="PAD36" gate="1" x="-83.82" y="27.94"/>
 <instance part="PAD37" gate="1" x="-83.82" y="33.02"/>
 <instance part="PAD39" gate="1" x="-43.18" y="-50.8" rot="R270"/>
-<instance part="PAD43" gate="1" x="17.78" y="-40.64" rot="R270"/>
+<instance part="PAD43" gate="1" x="-68.58" y="-50.8" rot="R270"/>
 <instance part="PAD45" gate="1" x="-40.64" y="-43.18" rot="R270"/>
-<instance part="PAD48" gate="1" x="27.94" y="-40.64" rot="R270"/>
+<instance part="PAD48" gate="1" x="-73.66" y="-50.8" rot="R270"/>
 <instance part="PAD49" gate="1" x="-48.26" y="-50.8" rot="R270"/>
 <instance part="GND7" gate="1" x="-43.18" y="-12.7"/>
 <instance part="P+3" gate="1" x="-129.54" y="40.64"/>
@@ -8132,6 +8139,13 @@ SMD type&lt;br&gt;</description>
 <instance part="C5" gate="G$1" x="45.72" y="-50.8"/>
 <instance part="PAD1" gate="1" x="40.64" y="20.32" rot="R180"/>
 <instance part="PAD2" gate="1" x="40.64" y="27.94" rot="R180"/>
+<instance part="PAD5" gate="1" x="-63.5" y="-50.8" rot="R270"/>
+<instance part="PAD7" gate="1" x="12.7" y="-40.64" rot="R270"/>
+<instance part="PAD15" gate="1" x="22.86" y="-40.64" rot="R270"/>
+<instance part="PAD19" gate="1" x="40.64" y="30.48" rot="R180"/>
+<instance part="PAD20" gate="1" x="40.64" y="17.78" rot="R180"/>
+<instance part="PAD21" gate="1" x="17.78" y="-40.64" rot="R270"/>
+<instance part="PAD22" gate="1" x="-78.74" y="-50.8" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -8180,6 +8194,22 @@ SMD type&lt;br&gt;</description>
 <pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="-55.88" x2="45.72" y2="-58.42" width="0.1524" layer="91"/>
 <junction x="45.72" y="-58.42"/>
+<pinref part="PAD5" gate="1" pin="P"/>
+<wire x1="-63.5" y1="-53.34" x2="-63.5" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="-58.42" x2="-58.42" y2="-58.42" width="0.1524" layer="91"/>
+<junction x="-58.42" y="-58.42"/>
+<pinref part="PAD48" gate="1" pin="P"/>
+<wire x1="-63.5" y1="-58.42" x2="-68.58" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="-58.42" x2="-73.66" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="-73.66" y1="-58.42" x2="-73.66" y2="-53.34" width="0.1524" layer="91"/>
+<junction x="-63.5" y="-58.42"/>
+<pinref part="PAD43" gate="1" pin="P"/>
+<wire x1="-68.58" y1="-53.34" x2="-68.58" y2="-58.42" width="0.1524" layer="91"/>
+<junction x="-68.58" y="-58.42"/>
+<pinref part="PAD22" gate="1" pin="P"/>
+<wire x1="-73.66" y1="-58.42" x2="-78.74" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="-78.74" y1="-58.42" x2="-78.74" y2="-53.34" width="0.1524" layer="91"/>
+<junction x="-73.66" y="-58.42"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -8237,8 +8267,7 @@ SMD type&lt;br&gt;</description>
 <wire x1="7.62" y1="-45.72" x2="12.7" y2="-45.72" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="-45.72" x2="17.78" y2="-45.72" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="-45.72" x2="22.86" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="-45.72" x2="27.94" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="-45.72" x2="33.02" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="-45.72" x2="33.02" y2="-45.72" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="22.86" y1="-45.72" x2="22.86" y2="-48.26" width="0.1524" layer="91"/>
 <junction x="22.86" y="-45.72"/>
@@ -8252,12 +8281,6 @@ SMD type&lt;br&gt;</description>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
 <wire x1="-2.54" y1="-45.72" x2="-2.54" y2="-43.18" width="0.1524" layer="91"/>
 <junction x="-2.54" y="-45.72"/>
-<pinref part="PAD43" gate="1" pin="P"/>
-<wire x1="17.78" y1="-43.18" x2="17.78" y2="-45.72" width="0.1524" layer="91"/>
-<junction x="17.78" y="-45.72"/>
-<pinref part="PAD48" gate="1" pin="P"/>
-<wire x1="27.94" y1="-43.18" x2="27.94" y2="-45.72" width="0.1524" layer="91"/>
-<junction x="27.94" y="-45.72"/>
 <pinref part="PAD53" gate="1" pin="P"/>
 <wire x1="2.54" y1="-43.18" x2="2.54" y2="-45.72" width="0.1524" layer="91"/>
 <pinref part="PAD52" gate="1" pin="P"/>
@@ -8268,6 +8291,13 @@ SMD type&lt;br&gt;</description>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="-45.72" x2="33.02" y2="-45.72" width="0.1524" layer="91"/>
 <junction x="33.02" y="-45.72"/>
+<pinref part="PAD7" gate="1" pin="P"/>
+<wire x1="12.7" y1="-43.18" x2="12.7" y2="-45.72" width="0.1524" layer="91"/>
+<pinref part="PAD15" gate="1" pin="P"/>
+<wire x1="22.86" y1="-43.18" x2="22.86" y2="-45.72" width="0.1524" layer="91"/>
+<pinref part="PAD21" gate="1" pin="P"/>
+<wire x1="17.78" y1="-45.72" x2="17.78" y2="-43.18" width="0.1524" layer="91"/>
+<junction x="17.78" y="-45.72"/>
 </segment>
 <segment>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
@@ -8335,7 +8365,7 @@ SMD type&lt;br&gt;</description>
 <junction x="-111.76" y="10.16"/>
 </segment>
 </net>
-<net name="N$43" class="0">
+<net name="BOOT0" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="B" gate="G$1" pin="P1"/>
@@ -8457,6 +8487,10 @@ SMD type&lt;br&gt;</description>
 <wire x1="35.56" y1="22.86" x2="35.56" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="20.32" x2="38.1" y2="20.32" width="0.1524" layer="91"/>
 <junction x="35.56" y="22.86"/>
+<pinref part="PAD20" gate="1" pin="P"/>
+<wire x1="38.1" y1="17.78" x2="35.56" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="17.78" x2="35.56" y2="20.32" width="0.1524" layer="91"/>
+<junction x="35.56" y="20.32"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -8473,6 +8507,10 @@ SMD type&lt;br&gt;</description>
 <wire x1="35.56" y1="25.4" x2="35.56" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="27.94" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
 <junction x="35.56" y="25.4"/>
+<pinref part="PAD19" gate="1" pin="P"/>
+<wire x1="38.1" y1="30.48" x2="35.56" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="30.48" x2="35.56" y2="27.94" width="0.1524" layer="91"/>
+<junction x="35.56" y="27.94"/>
 </segment>
 </net>
 <net name="N$3" class="0">
